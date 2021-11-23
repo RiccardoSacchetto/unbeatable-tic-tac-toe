@@ -1,0 +1,211 @@
+ /* General */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Layout */
+#root {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    margin-top: calc((100vh - height)/2)
+}
+
+#game {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    /* border-bottom: 2px solid green; */
+    position: relative;
+}
+
+.box  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn-p {
+    display: block;
+    height: 2.5rem;
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px auto 0;
+}
+
+/* Button */
+
+.button-container {
+    height: 60px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-family: monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline: none;
+    border: 2px solid currentColor;
+    display: block;
+    border-radius: 10%/ 30%;
+    background-color: #eee;
+    color: #242424;
+    box-shadow: 0 1px 3px #242424;
+    transform: scale(1);
+    transition-property: background-color, color, box-shadow, transform, opacity;
+    transition-duration: 200ms;
+}
+
+.button:hover {
+    background-color: #242424;
+    color: #eee;
+    box-shadow: none;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+.button:disabled {
+    opacity: 65%;
+}
+
+.button:disabled:hover {
+    background-color: #eee;
+    color: #242424;
+    box-shadow: 0 1px 3px #242424;
+}
+
+.button-start {
+    font-size: 1.75rem;
+    padding: 0.3em 1.2em;
+}
+
+/* Lines for winning */
+
+.line-top::after,
+.line-center::after,
+.line-bottom::after,
+.line-diagonal-left::after,
+.line-diagonal-right::after,
+.line-left::after,
+.line-center-vertical::after,
+.line-right::after {
+    content: "";
+    border-top: 8px solid black;
+    position: absolute;
+}
+
+.line-diagonal-left::after,
+.line-diagonal-right::after {
+    width: 600px;
+    top: 221px;
+    left: -75px;
+}
+
+.line-diagonal-left::after {
+    transform: rotate(45deg);
+}
+
+.line-diagonal-right::after {
+    transform: rotate(-45deg);
+}
+
+.line-top::after,
+.line-center::after,
+.line-bottom::after,
+.line-left::after,
+.line-center-vertical::after,
+.line-right::after {
+    width: 450px;
+}
+
+.line-top::after {
+    top: 71px;
+}
+
+.line-center::after {
+    top: 221px;
+}
+
+.line-bottom::after {
+    top: 371px;
+}
+
+.line-left::after,
+.line-center-vertical::after,
+.line-right::after {
+    top: 221px;
+    transform: rotate(90deg);
+}
+
+.line-left::after {
+    left: -150px;
+}
+
+.line-right::after {
+    left: 150px;
+}
+
+/* Lines for mapping the game */
+
+#top-left,
+#top,
+#top-right,
+#left,
+#center,
+#right {
+    border-bottom: 2px solid black;
+}
+
+#top-left,
+#left,
+#bottom-left,
+#top,
+#center,
+#bottom {
+    border-right: 2px solid black;
+}
+
+/* Icon Font Awesome */
+
+.cross {
+    color: darkblue;
+    font-size: 6rem;
+}
+
+.circle {
+    color: darkred;
+    font-size: 4.5rem;
+}
+
