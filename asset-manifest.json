@@ -1,4 +1,17 @@
 {
-  "main.js": "static/js/main.74d8d0ed.js",
-  "main.js.map": "static/js/main.74d8d0ed.js.map"
+  "files": {
+    "main.js": "/unbeatable-tic-tac-toe/static/js/main.874500a5.chunk.js",
+    "main.js.map": "/unbeatable-tic-tac-toe/static/js/main.874500a5.chunk.js.map",
+    "runtime-main.js": "/unbeatable-tic-tac-toe/static/js/runtime-main.00bdd181.js",
+    "runtime-main.js.map": "/unbeatable-tic-tac-toe/static/js/runtime-main.00bdd181.js.map",
+    "static/js/2.30dbb0ef.chunk.js": "/unbeatable-tic-tac-toe/static/js/2.30dbb0ef.chunk.js",
+    "static/js/2.30dbb0ef.chunk.js.map": "/unbeatable-tic-tac-toe/static/js/2.30dbb0ef.chunk.js.map",
+    "index.html": "/unbeatable-tic-tac-toe/index.html",
+    "static/js/2.30dbb0ef.chunk.js.LICENSE.txt": "/unbeatable-tic-tac-toe/static/js/2.30dbb0ef.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00bdd181.js",
+    "static/js/2.30dbb0ef.chunk.js",
+    "static/js/main.874500a5.chunk.js"
+  ]
 }
